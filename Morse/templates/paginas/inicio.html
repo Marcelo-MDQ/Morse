@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block titulo %} INSPECTOR MORSE {% endblock %}
+
+{% block contenido %} 
+
+
+<div class="card">
+
+    <main role="main" class="container">
+        
+      <div class="row">
+
+        <div class="col-md-7 ">
+
+          <div class="mt-4 p-4 bg-black text-white rounded">
+            <div class="col-md-12 px-0">
+
+              <div align="left">
+                {% load static %}        
+                <img src="{% static "img\Morse-Lewis-portada.jpg" %}" width="360" float="center" srcset="">
+              </div>
+              
+              
+            </div>
+          </div>
+          </br>
+
+
+        </div>
+
+    
+        <aside class="col-md-5 ">
+
+
+            <div class="p-4">
+              <h4 class="font-italic">Algunos sitios</h4>
+              <ol class="list-unstyled">
+                  <li><a target="_blank" href="https://www.diariocritico.com/cine/mejores-westerns-historia">Los 30 mejores westerns (Diariocritico)</a></li>
+                  <li><a target="_blank" href="https://www.vulture.com/article/50-best-western-movies-ever.html">Una lista de 50 westerns (Vulture)</a></li>
+                  <li><a target="_blank" href="https://editorial.rottentomatoes.com/guide/best-western-movies/">Los 100 westerns de Rottentomatoes</a></li>
+              </ol>
+            </div>
+
+
+        </aside>
+    
+      </div>
+  
+      <!--
+      </br>
+      <div class="card-body bg-light text-black rounded">
+        <h4 class="card-title " align="center">Top capítulos</h4>
+        <div class="container  " align="center">
+         </div>
+      </div>
+      </br>
+      -->
+  
+    </main>
+    
+</div> 
+  
+{% endblock %}
