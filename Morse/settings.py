@@ -24,8 +24,12 @@ SECRET_KEY = 'django-insecure-*dqe!2-&--sq1h7a0vf8(4_&6au=8nfdkpok_i^h(d(+cfzc4s
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['127.0.0.1']
+
+# en produccion morse
+#DEBUG = False
+#ALLOWED_HOSTS = ['morse.pythonanywhere.com']
 
 
 # Application definition
@@ -74,13 +78,37 @@ WSGI_APPLICATION = 'Morse.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
 
+# base del sitio morse.pythonanywhere.com
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'morse$morse',
+#        'USER': 'morse',
+#        'PASSWORD': 'Romeo1368',
+#       'HOST': 'morse.mysql.pythonanywhere-services.com',
+#    }
+#}
+
+DATABASES = {  
+  'default': {  
+     'ENGINE': 'django.db.backends.mysql',  
+     'NAME': 'morse',  
+     'USER': 'root',
+     'PASSWORD': '',
+     'HOST': 'localhost',
+     'PORT': 3306,
+     'OPTIONS': {
+       'sql_mode': 'traditional',
+        }
+   }  
+ }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

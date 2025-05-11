@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block titulo %} EPISODIO {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-body">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 " >
+                    {% load static %}
+                    <img src="{% static "img\Ep1-dvd.jpg" %}" width="100%" float="right" srcset="">
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 " >
+                    <h2 class="card-title">THE DEAD OF JERICHO</h2>
+
+                        <h4><p>Episodio 1</p>
+                            <p>6 de enero de 1987</p>
+                            </h4>
+
+                        <p>
+                            
+                        </p>
+
+                        {% if capitulos.imdb %}
+                            <a href="{{ capitulos.imdb }}" target="_blank">IMDB</a> 
+                        {% else %}  
+                            IMDB
+                        {% endif %}
+                        <br>
+                        <p>Anne Stavely, una amiga de Morse, aparentemente se suicida en su casa en 
+                            Jericho, aunque Morse no está convencido de que esto sea lo que sucedió.
+
+                            Morse is taken aback by the apparent suicide of Anne Staveley. 
+                            Morse knew her well as they were members of the same choir and he was 
+                            quite attracted to her. On the evening of the choir's public performance, 
+                            Morse stops by her house to collect her but finds her front door open 
+                            and no one at home. On his way home after the performance he sees 
+                            several police vehicles outside her house and it appears Anne has 
+                            hung herself. When her nosy neighbour is also killed, Morse is 
+                            convinced that Anne was murdered.
+                        </p>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        
+
+        <div class="card-body text-black rounded">
+            <div class="container" align="center">
+            </br>
+                  {% load static %}        
+                  <img class="avataractor_chico" src="{% static "img\John-Thaw.jpg" %}" width="100%" float="right" srcset="">
+                  <img class="avataractor_chico" src="{% static "img\Kevin-Whately.jpg" %}" width="100%" float="right" srcset="">
+    
+    
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+</br>
+<div class="card-body bg-light text-black rounded">
+    <div class="container  " align="center">
+                {% load static %}
+                    <img class="cajita" src="{% static "img\T01E01.jpg" %}" width="240">
+                    <img class="cajita" src="{% static "img\morse-t1-e1-1.png" %}" width="240">
+    </div>
+</div>
+
+</div> 
+
+
+
+{% endblock %}

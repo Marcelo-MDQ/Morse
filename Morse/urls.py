@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .models import Capitulo
+from .models import Actor
+from .models import Invitado
+from .models import Review
 from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.inicio, name='inicio'),
+    path('resenia/<int:id>/',views.reseniaCapitulo, name = 'resenia_Capitulo'),
 ]

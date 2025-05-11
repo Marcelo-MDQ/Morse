@@ -5,45 +5,53 @@
 {% block contenido %} 
 
 
-<div class="card">
+<div class="card bg-primary" >
 
     <main role="main" class="container">
         
-      <div class="row">
+      <div class="row bg-secondary">
 
-        <div class="col-md-7 ">
-
+        <div class="col-md-5 ">
           <div class="mt-4 p-4 bg-black text-white rounded">
-            <div class="col-md-12 px-0">
-
+            <div class="col-md-10 px-0">
               <div align="left">
                 {% load static %}        
-                <img src="{% static "img\Morse-Lewis-portada.jpg" %}" width="360" float="center" srcset="">
+                <img src="{% static "img\Inspector_Morse-logo-svg.png" %}" width="100%" float="right" srcset="">
+                <img src="{% static "img\Morse-Fondo-removebg-preview-400px.png" %}" width="100%" float="right" srcset="">
               </div>
-              
-              
             </div>
           </div>
           </br>
-
-
         </div>
 
     
-        <aside class="col-md-5 ">
-
-
+        <div class="col-md-5 bg-success">
             <div class="p-4">
               <h4 class="font-italic">Algunos sitios</h4>
               <ol class="list-unstyled">
                   <li><a target="_blank" href="https://www.diariocritico.com/cine/mejores-westerns-historia">Los 30 mejores westerns (Diariocritico)</a></li>
                   <li><a target="_blank" href="https://www.vulture.com/article/50-best-western-movies-ever.html">Una lista de 50 westerns (Vulture)</a></li>
                   <li><a target="_blank" href="https://editorial.rottentomatoes.com/guide/best-western-movies/">Los 100 westerns de Rottentomatoes</a></li>
-              </ol>
+              
+                  <a href="{% url 'resenia_Capitulo' 1 %}">CAPITULO 1</a>
+                </ol>
             </div>
+        </div>
+
+        <div class="col-md-2 bg-info">
+        </br>
+        </br>
+            <div class="col-md-auto">
+                  {% load static %}        
+                  <img class="avataractor_chico" src="{% static "img\John-Thaw.jpg" %}" width="100%" float="right" srcset="">
+                  </br>
+                  <img class="avataractor_chico" src="{% static "img\Kevin-Whately.jpg" %}" width="100%" float="right" srcset="">
+                  </br>
+                  <img class="avataractor_chico" src="{% static "img\Colin-Dexter.jpg" %}" width="100%" float="right" srcset="">
 
 
-        </aside>
+            </div>
+        </div>
     
       </div>
   
