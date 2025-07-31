@@ -11,7 +11,10 @@ def inicio(request):
 
 def reseniaCapitulo(request, id):
     capitulos = Capitulo.objects.get(id_capitulo=id)
-    capitulos = Capitulo.objects.all()
-    cantidad = len(capitulos)
-    print(cantidad)
-    return render(request, 'paginas/reseniaEpisodio.html', {'capitulos': capitulos})
+    reviews = Review.objects.get(id_capitulo=id)
+    invitados = Invitado.objects.filter(id_capitulo=id).all()
+    return render(request, 'paginas/reseniaCapitulo.html', {
+        'capitulos': capitulos,
+        'reviews': reviews,
+        'invitados': invitados,
+        })

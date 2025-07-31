@@ -12,9 +12,12 @@ class Capitulo(models.Model):
     imdb = models.CharField(max_length=100, default="", blank=True, null=True)
     titulo_ingles = models.CharField(max_length=100)
     titulo_espaniol = models.CharField(max_length=100, default="", blank=True, null=True)
-    imagen_vertical = models.ImageField(upload_to='libreria/static/img', verbose_name="Imagen_vertical", null=True, blank=True)
-    imagen1_horizontal = models.ImageField(upload_to='libreria/static/img', verbose_name="Imagen1_horizontal", null=True, blank=True)
-    imagen2_horizontal = models.ImageField(upload_to='libreria/static/img', verbose_name="Imagen2_horizontal", null=True, blank=True)
+    #imagen_vertical = models.ImageField(upload_to='libreria/static/img', verbose_name="Imagen_vertical", null=True, blank=True)
+    #imagen1_horizontal = models.ImageField(upload_to='libreria/static/img', verbose_name="Imagen1_horizontal", null=True, blank=True)
+    #imagen2_horizontal = models.ImageField(upload_to='libreria/static/img', verbose_name="Imagen2_horizontal", null=True, blank=True)
+    imagen_vertical = models.ImageField(verbose_name="Imagen_vertical", null=True, blank=True)
+    imagen1_horizontal = models.ImageField(verbose_name="Imagen1_horizontal", null=True, blank=True)
+    imagen2_horizontal = models.ImageField(verbose_name="Imagen2_horizontal", null=True, blank=True)
     visto = models.BooleanField(verbose_name="Vista", default=False, null=True)
 
     # para que se vea mejor en la parte de Admin
@@ -44,7 +47,8 @@ class Invitado(models.Model):
     id_invitado = models.AutoField(primary_key=True)
     id_capitulo = models.IntegerField(verbose_name="id_capitulo")
     nombreinvitado = models.CharField(max_length=100)
-    imageninvitado = models.ImageField(upload_to='libreria/static/img', verbose_name="ImagenInvitado", null=True)
+    #imageninvitado = models.ImageField(upload_to='libreria/static/img', verbose_name="ImagenInvitado", null=True)
+    imageninvitado = models.ImageField(verbose_name="ImagenInvitado", null=True)
     textoinvitado = models.TextField(verbose_name="TextoInvitado", blank=True, default="", null=True)
 
     # para que se vea mejor en la parte de Admin

@@ -5,19 +5,19 @@
 {% block contenido %} 
 
 
-<div class="card bg-primary" >
+<div class="card " >
 
     <main role="main" class="container">
         
-      <div class="row bg-secondary">
+      <div class="row ">
 
         <div class="col-md-5 ">
-          <div class="mt-4 p-4 bg-black text-white rounded">
+          <div class="mt-4 p-4 text-white rounded">
             <div class="col-md-10 px-0">
               <div align="left">
                 {% load static %}        
-                <img src="{% static "img\Inspector_Morse-logo-svg.png" %}" width="100%" float="right" srcset="">
-                <img src="{% static "img\Morse-Fondo-removebg-preview-400px.png" %}" width="100%" float="right" srcset="">
+                <img src="{% static "img/Inspector_Morse-logo.svg.png" %}" width="100%" float="right" srcset="">
+                <img src="{% static "img/Morse-Inicio-removebg-preview.png" %}" width="100%" float="right" srcset="">
               </div>
             </div>
           </div>
@@ -25,15 +25,15 @@
         </div>
 
     
-        <div class="col-md-5 bg-success">
+        <div class="col-md-5 ">
             <div class="p-4">
-              <h4 class="font-italic">Algunos sitios</h4>
               <ol class="list-unstyled">
-                  <li><a target="_blank" href="https://www.diariocritico.com/cine/mejores-westerns-historia">Los 30 mejores westerns (Diariocritico)</a></li>
-                  <li><a target="_blank" href="https://www.vulture.com/article/50-best-western-movies-ever.html">Una lista de 50 westerns (Vulture)</a></li>
-                  <li><a target="_blank" href="https://editorial.rottentomatoes.com/guide/best-western-movies/">Los 100 westerns de Rottentomatoes</a></li>
               
                   <a href="{% url 'resenia_Capitulo' 1 %}">CAPITULO 1</a>
+                  </br>
+                  <a href="{% url 'resenia_Capitulo' 2 %}">CAPITULO 2</a>
+                  </br>
+                  <a href="{% url 'resenia_Capitulo' 3 %}">CAPITULO 3</a>
                 </ol>
             </div>
         </div>
@@ -42,12 +42,6 @@
         </br>
         </br>
             <div class="col-md-auto">
-                  {% load static %}        
-                  <img class="avataractor_chico" src="{% static "img\John-Thaw.jpg" %}" width="100%" float="right" srcset="">
-                  </br>
-                  <img class="avataractor_chico" src="{% static "img\Kevin-Whately.jpg" %}" width="100%" float="right" srcset="">
-                  </br>
-                  <img class="avataractor_chico" src="{% static "img\Colin-Dexter.jpg" %}" width="100%" float="right" srcset="">
 
 
             </div>

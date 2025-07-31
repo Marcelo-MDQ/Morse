@@ -1,83 +1,79 @@
 {% extends "base.html" %}
 
-{% block titulo %} EPISODIO {% endblock %}
+{% block titulo %} Capítulo {% endblock %}
 
 {% block contenido %} 
 
 <div class="card">
+
     <div class="card-body">
+
         <div class="container">
 
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 " >
-                    {% load static %}
-                    <img src="{% static "img\Ep1-dvd.jpg" %}" width="100%" float="right" srcset="">
+
+                <h4>Episodio {{ capitulos.numero }}                
+                </h4>
+                <h2 class="card-title">{{ capitulos.titulo_ingles }}</h2>
+
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-3">
+
+
+                        <img src="{{ capitulos.imagen_vertical.url }}" width="100%" float="right" srcset="">
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 " >
-                    <h2 class="card-title">THE DEAD OF JERICHO</h2>
 
-                        <h4><p>Episodio 1</p>
-                            <p>6 de enero de 1987</p>
-                            </h4>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-3">
+                        <img src="{{ capitulos.imagen1_horizontal.url }}" width="100%" float="right" srcset="">
+                        <img src="{{ capitulos.imagen2_horizontal.url }}" width="100%" float="right" srcset="">
+                </div>
 
+                <div class="card col-xs-12 col-sm-12 col-md-8 col-lg-6">
+
+                    {% if reviews %}  
                         <p>
-                            
+                            <h4>Reseña</h4>
+                             {{ reviews.textoreview }}   
                         </p>
+                    {% endif %}
 
-                        {% if capitulos.imdb %}
-                            <a href="{{ capitulos.imdb }}" target="_blank">IMDB</a> 
-                        {% else %}  
-                            IMDB
-                        {% endif %}
-                        <br>
-                        <p>Anne Stavely, una amiga de Morse, aparentemente se suicida en su casa en 
-                            Jericho, aunque Morse no está convencido de que esto sea lo que sucedió.
-
-                            Morse is taken aback by the apparent suicide of Anne Staveley. 
-                            Morse knew her well as they were members of the same choir and he was 
-                            quite attracted to her. On the evening of the choir's public performance, 
-                            Morse stops by her house to collect her but finds her front door open 
-                            and no one at home. On his way home after the performance he sees 
-                            several police vehicles outside her house and it appears Anne has 
-                            hung herself. When her nosy neighbour is also killed, Morse is 
-                            convinced that Anne was murdered.
-                        </p>
-                    
                 </div>
 
             </div>
 
         </div>
-        
-
-        <div class="card-body text-black rounded">
-            <div class="container" align="center">
-            </br>
-                  {% load static %}        
-                  <img class="avataractor_chico" src="{% static "img\John-Thaw.jpg" %}" width="100%" float="right" srcset="">
-                  <img class="avataractor_chico" src="{% static "img\Kevin-Whately.jpg" %}" width="100%" float="right" srcset="">
-    
-    
-            </div>
-        </div>
-        
     </div>
 
+    <div class="card-body">
 
+        <div class="container">
 
+            <div class="row">
 
-</br>
-<div class="card-body bg-light text-black rounded">
-    <div class="container  " align="center">
-                {% load static %}
-                    <img class="cajita" src="{% static "img\T01E01.jpg" %}" width="240">
-                    <img class="cajita" src="{% static "img\morse-t1-e1-1.png" %}" width="240">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+                <h4>Frases</h4>
+                <p>
+                Chief Superintendent Strange: Well, I've got some good and bad news for you Morse. We're not going to give you the Super's job.
+                <br>Chief Inspector Morse: Right.
+                </p>
+            </div>
+
+           <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+
+                {% if invitados %}    
+                <h4>Estrellas invitadas</h4>
+
+                    {% for invitado in invitados %}
+                        <img class="avataractor_chico" src="{{ invitado.imageninvitado.url }}" width="100%" float="right" srcset="">
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+
+        </div>
     </div>
 </div>
 
 </div> 
-
-
 
 {% endblock %}
